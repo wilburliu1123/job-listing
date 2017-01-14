@@ -3,4 +3,5 @@
   </div>
   <h2><%= @job.title %> </h2>
   <p><%= @job.description %> </p>
+  <%= link_to("post a resume", new_job_resume_path(@job), class: "btn btn-default pull-right")%>
 </div>
