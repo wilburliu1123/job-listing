@@ -1,7 +1,9 @@
-<div class="mol-md-12">
-  <div class="job">
-  </div>
+<div class="jumbotron">
+  <h3 class="title">
+    只有想不到，没有找不到。
+  </h3>
+</div>
   <h2><%= @job.title %> </h2>
   <p><%= @job.description %> </p>
-  <%= link_to("post a resume", new_job_resume_path(@job), class: "btn btn-default pull-right")%>
+  <%= link_to("投简历", new_job_resume_path(@job), class: "btn btn-default ")%>
 </div>
