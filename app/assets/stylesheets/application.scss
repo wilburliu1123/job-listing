@@ -23,8 +23,28 @@
    background-image:url('https://static.pexels.com/photos/29642/pexels-photo-29642.jpg');
    background-repeat: no-repeat;
    background-size: cover;
-   padding-bottom: 110px;
+
  }
+ .background{
+   background-image: url('https://static.pexels.com/photos/29642/pexels-photo-29642.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   margin-bottom: 100px;
+ }
+
+
+ .devise-text{
+   max-width: 450px;//最大宽度
+   margin-top: 100px;//和顶部拉开距离
+   margin: 100px 100px 50px;
+
+   text-align: left;
+   color: white;
+
+ }
+
+
 
  .title {
    background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
@@ -39,17 +59,7 @@
      color: #222;	//字体颜色
      padding: 50px 20px 0;//上50px，左右20px，下0
  }
-//  .jumbotron p {
-//     margin: 0;//上下左右margin为0
-//     font-size: 26px;//字体大小
-//     max-width: 500px;//最大宽度
-//     background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-//     padding: 20px;//上下左右padding为20px
-//     text-align:left;//文字左对齐
-//     color: white;//字体颜色
-//     border-bottom-right-radius: 3px;//右下角圆边
-//     border-bottom-left-radius: 3px;//左下角圆边
-// }
+
  .slogan {
    margin-top: 10px;
    margin-bottom: 50px;
