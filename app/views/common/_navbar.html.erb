@@ -7,7 +7,7 @@
     <div class="form-group form-inline search-bar">
       <%= form_tag search_jobs_path , :method => :get, :class => "jobs-search-form" do %>
         <div class="input-group">
-          <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索关键字...学校,分类，职位名称">
+          <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索关键字...">
 
           <span class="input-group-btn">
             <button type="submit" class="btn btn-default">
@@ -16,7 +16,19 @@
           </span>
         </div>
       <% end %>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          分类
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li> <%= link_to("套瓷", jobs_path(:order => "套瓷")) %> </li>
+          <li> <%= link_to("兼职", jobs_path(:order => "兼职")) %> </li>
+          <li> <%= link_to("实习", jobs_path(:order => "实习")) %> </li>
+        </ul>
+      </li>
     </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">

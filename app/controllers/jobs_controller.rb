@@ -7,6 +7,12 @@ class JobsController < ApplicationController
       Job.where(:is_hidden => false).order('wage_lower_bound DESC')
     when 'by_upper_bound'
       Job.where(:is_hidden => false).order("wage_upper_bound DESC")
+    when '套瓷'
+           Job.where(:category => "套瓷").order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+    when '兼职'
+          Job.where(:category => "兼职").order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+    when '实习'
+          Job.where(:category => "实习").order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     else
       Job.where(:is_hidden => false).order("created_at DESC")
     end
@@ -66,6 +72,6 @@ class JobsController < ApplicationController
   end
   private
   def job_params
-    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden)
+    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :category, :is_hidden)
   end
 end
