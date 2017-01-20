@@ -3,7 +3,7 @@
     只有想不到，没有找不到。
   </h3>
 </div>
-
+<%= render :partial => "jobs/search_bar" %>
 
 
 <div class="dropdown clearfix pull-right">
@@ -33,7 +33,7 @@
         <tbody>
           <% @jobs.each do |job| %>
           <tr>
-            
+
             <td><%= link_to(job.title, job_path(job)) %></td>
             <td><%= job.description %></td>
             <td><%= job.created_at%></td>
