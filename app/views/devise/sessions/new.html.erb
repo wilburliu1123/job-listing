@@ -1,9 +1,11 @@
 <div class="jumbotron">
 <div class="devise-text">
-<h2>用户登录</h2>
+
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
+
+    <h2>用户登录</h2>
+      <div class="form-inputs">
     <%= f.input :email, :label => "电子邮箱", required: false, autofocus: true %>
     <%= f.input :password, :label => "密码", required: false %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
@@ -16,6 +18,11 @@
 
 已经有账号？  <a href="/users/sign_in">登录</a>
 <br>
+
 <a href="/users/password/edit">忘记密码</a>
+<br>
+<br>
+<br>
+<br>
 </div>
 </div>
